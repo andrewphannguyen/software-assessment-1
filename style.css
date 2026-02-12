@@ -1,0 +1,274 @@
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: #00eaff;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00eaff;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 120px 10%;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-title {
+    font-size: 3rem;
+}
+
+.hero-sub {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* SECTIONS */
+.section {
+    padding: 80px 10%;
+}
+
+/* ANIMATIONS */
+.fade-in {
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.slide-up {
+    animation: slideUp 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* PROJECTS */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background: rgba(255,255,255,0.1);
+    padding: 25px;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    border-color: #00eaff;
+}
+
+/* WEATHER APP */
+.glass {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    width: 350px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.weather-box input,
+.weather-box button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 12px;
+}
+
+.weather-box button {
+    background: #00eaff;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.weather-box button:hover {
+    background: #00bcd4;
+}
+
+/* DROPDOWN (PROJECT CODE BOXES) */
+.dropdown-btn {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #00eaff;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-btn:hover {
+    background: #00bcd4;
+}
+
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+    background: rgba(255,255,255,0.08);
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 0 15px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.dropdown-content.open {
+    padding: 15px;
+    max-height: 1200px; /* or any large number */
+    overflow-y: auto;
+}
+
+
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+    background: rgba(255,255,255,0.08);
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 0 15px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* When opened */
+.dropdown-content.open {
+    padding: 15px;
+    max-height: 500px; /* container height */
+    overflow-y: auto;  /* enables scrolling */
+}
+
+/* Code box styling */
+.dropdown-content pre {
+    white-space: pre-wrap;
+    color: #00eaff;
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 10px;
+    overflow-x: auto;   /* horizontal scroll if needed */
+}
+
+/* ACHIEVEMENT IMAGES */
+.achievement-images {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.achievement-images img {
+    width: 350px;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.25);
+    box-shadow: 0 0 20px rgba(0, 238, 255, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(6px);
+}
+
+.achievement-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 238, 255, 0.45);
+}
+
+.nav-links li:last-child a {
+    background: rgba(0, 238, 255, 0.2);
+    padding: 8px 14px;
+    border-radius: 20px;
+    color: #00eaff;
+    font-weight: 600;
+    border: 1px solid rgba(0, 238, 255, 0.5);
+}
+
+.nav-links a.active {
+    color: #00eaff;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(0, 238, 255, 0.7);
+}
+
+.logo a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav-links a.active {
+    color: #00eaff;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(0, 238, 255, 0.7);
+}
+
+.dropdown-content pre {
+    white-space: pre-wrap;
+    font-size: 0.8rem;
+}
+
+/* CENTER WEATHER APP */
+#weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+#weather h2 {
+    text-align: center;
+    width: 100%;
+}
+
